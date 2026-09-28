@@ -4,13 +4,14 @@ export const normalizePhone = (value: string) => {
   if (!/^[+\d\s()-]+$/.test(value))
     throw new Error('Введите номер телефона без букв.');
   const digits = value.replace(/\D/g, '');
-  const phone = /^8\d{10}$/.test(digits)
-    ? `7${digits.slice(1)}`
-    : digits;
+  const phone = /^8\d{10}$/.test(digits) ? `7${digits.slice(1)}` : digits;
   if (!/^7\d{10}$/.test(phone))
-    throw new Error('Введите номер в формате +7 (999) 123-45-67 или 8 (999) 123-45-67.');
+    throw new Error(
+      'Введите номер в формате +7 (999) 123-45-67 или 8 (999) 123-45-67.'
+    );
   return phone;
 };
+
 export const normalizeApiUrl = (value: string) => {
   const url = new URL(value);
   if (

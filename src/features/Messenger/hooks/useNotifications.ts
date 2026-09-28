@@ -9,8 +9,10 @@ import { eventReceived } from '../store/reducers/messengerSlice';
 
 export const useNotifications = () => {
   const dispatch = useAppDispatch();
+
   useEffect(() => {
     const controller = new AbortController();
+
     void poll(
       {
         receive: (signal) =>
@@ -40,6 +42,7 @@ export const useNotifications = () => {
         dispatch(eventReceived(event));
       }
     );
+
     return () => controller.abort();
   }, [dispatch]);
 };

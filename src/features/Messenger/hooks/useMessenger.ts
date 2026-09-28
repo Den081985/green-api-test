@@ -46,6 +46,7 @@ export const useMessenger = () => {
   } | null>(null);
   const [phoneForm] = Form.useForm<{ phone: string }>();
   const scope = useRequestScope();
+
   const createChat = async ({ phone }: { phone: string }) => {
     if (creating) return;
     const { signal } = scope.current;
@@ -76,6 +77,7 @@ export const useMessenger = () => {
       if (!signal.aborted) setCreateError(errorText(err));
     }
   };
+
   const send = async () => {
     if (
       !active ||
@@ -118,6 +120,7 @@ export const useMessenger = () => {
         });
     }
   };
+
   const logout = () => {
     scope.current.abort();
     // Abort queued and in-flight requests before resetting state or credentials.
@@ -129,6 +132,7 @@ export const useMessenger = () => {
     dispatch(messengerApi.util.resetApiState());
     dispatch(apiSlice.util.resetApiState());
   };
+
   return {
     active,
     chats,
@@ -155,4 +159,5 @@ export const useMessenger = () => {
     },
   };
 };
+
 export type MessengerView = ReturnType<typeof useMessenger>;

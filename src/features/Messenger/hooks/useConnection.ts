@@ -19,6 +19,7 @@ export const useConnection = () => {
   const [error, setError] = useState('');
   const scope = useRequestScope();
   const dispatch = useAppDispatch();
+
   const submit = async (values: Credentials) => {
     if (isLoading) return;
     setError('');
@@ -45,6 +46,7 @@ export const useConnection = () => {
       if (!signal.aborted) setError(errorText(err));
     }
   };
+
   return {
     form,
     submit,
