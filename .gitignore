@@ -1,0 +1,7 @@
+node_modules/
+.git-local/
+dist/
+*.tsbuildinfo
+.env*
+!.env.example
+build/

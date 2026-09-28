@@ -1,0 +1,17 @@
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--color-background);
+}
+#root {
+  min-height: 100dvh;
+}
+.loading-screen {
+  min-height: 100dvh;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

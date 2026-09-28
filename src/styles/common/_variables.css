@@ -1,0 +1,27 @@
+:root {
+  --color-chat-background: #f5f6fb;
+  --color-dot: #b8c0db24;
+  --color-logo-start: #4284f7;
+  --color-logo-end: #7752df;
+  --shadow-card: 0 20px 80px #28378108;
+  --shadow-message: 0 10px 35px #3642860a;
+  --color-primary: #606dea;
+  --color-primary-hover: #505ed9;
+  --color-primary-soft: #e4e8ff;
+  --color-background: #f7f8fc;
+  --color-surface: #fff;
+  --color-text: #222637;
+  --color-secondary: #858998;
+  --color-muted: #a0a4b3;
+  --color-border: #e5e7ef;
+  --color-success: #39855c;
+  --color-error: #b54141;
+  --font-family: Manrope, Arial, sans-serif;
+  --sidebar-width: 340px;
+  --radius: 12px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+}
